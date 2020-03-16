@@ -1,0 +1,193 @@
+<html>
+<head>
+    <title>innerHTML</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="/assets/css/chatStyle.css" />    
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" />    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>    
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="nickWrap">
+        <p>Enter a username: </p>
+        <form id="setNick">
+            <input size="35" id="nickname"/>
+            <input type="submit" />
+        </form>
+        <p id="nickError">&#x1F354 </p>
+    </div>
+
+    <div id="contentWrap">
+            <script>Push.Permission.request();</script>
+        <div id="chatWrap">
+            <div id="nickBox"></div>
+            <div id="chat"></div>
+            <form id="send-message">
+                    <div id="usersWrap">
+                             <select class="form-control col-sm-3 d-inline" id="users">    
+                            </select>                       
+                    </div>                    
+                <input size="35" id="message" class="col-sm-5" />
+                <div class="dropup d-inline">
+                    <button class="btn btn-secondary dropdown-toggle col-12 col-sm-2"
+                    type="button" 
+                    id="dropdownMenuButton" 
+                    data-toggle="dropdown" 
+                    aria-haspopup="true" 
+                    aria-expanded="false">
+                           Inserir emoji
+                     </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width:400px;height:400px">   
+                        <div class="emojisContainer" style="width:400px;height:400px">
+                            <p class="btn border emoji">😀</p> 
+                            <p class="btn border emoji">😬</p> 
+                            <p class="btn border emoji">😁</p> 
+                            <p class="btn border emoji">😂</p> 
+                            <p class="btn border emoji">😃</p> 
+							<p class="btn border emoji">😄</p>         
+							<p class="btn border emoji">🤣</p> 
+							<p class="btn border emoji">😅</p> 
+							<p class="btn border emoji">😆</p> 
+							<p class="btn border emoji">😇</p> 
+                            <p class="btn border emoji">😉</p> 
+                            <p class="btn border emoji">😊</p> 
+                            <p class="btn border emoji">🙂</p> 
+                            <p class="btn border emoji">🙃</p> 
+                            <p class="btn border emoji">😋</p> 
+                            <p class="btn border emoji">😌</p> 
+                            <p class="btn border emoji">😍</p> 
+                            <p class="btn border emoji">😘</p>
+                            <p class="btn border emoji">😗</p>
+                            <p class="btn border emoji">😙</p>
+                            <p class="btn border emoji">😚</p>
+                            <p class="btn border emoji">🤪</p>
+                            <p class="btn border emoji">😜</p>
+                            <p class="btn border emoji">😝</p>
+                            <p class="btn border emoji">😛</p>
+                            <p class="btn border emoji">🤑</p>
+                            <p class="btn border emoji">😎</p>
+                            <p class="btn border emoji">🤓</p>
+                            <p class="btn border emoji">🧐</p>
+                            <p class="btn border emoji">🤠</p>
+                            <p class="btn border emoji">🤗</p>
+                            <p class="btn border emoji">🤡</p>
+                            <p class="btn border emoji">😏</p>
+                            <p class="btn border emoji">😶</p>
+                            <p class="btn border emoji">😐</p>
+                            <p class="btn border emoji">😑</p>
+                            <p class="btn border emoji">😒</p>
+                            <p class="btn border emoji">🙄</p>
+                            <p class="btn border emoji">🤨</p>
+                            <p class="btn border emoji">🤔</p>
+                            <p class="btn border emoji">🤫</p>
+                            <p class="btn border emoji">🤭</p>
+                            <p class="btn border emoji">🤥</p>
+                            <p class="btn border emoji">😳</p>
+                            <p class="btn border emoji">😞</p>
+                            <p class="btn border emoji">😟</p>
+                            <p class="btn border emoji">😠</p>
+                            <p class="btn border emoji">😡</p>
+                            <p class="btn border emoji">🤬</p>
+                            <p class="btn border emoji">😔</p>
+                            <p class="btn border emoji">😕</p>
+                            <p class="btn border emoji">🙁</p>
+                            <p class="btn border emoji">☹</p>
+                            <p class="btn border emoji">😣</p>
+                            <p class="btn border emoji">😖</p>
+                            <p class="btn border emoji">😫</p>
+                            <p class="btn border emoji">😩</p>
+                            <p class="btn border emoji">😤</p>
+                            <p class="btn border emoji">😮</p>
+                            <p class="btn border emoji">😱</p>
+                            <p class="btn border emoji">😨</p>
+                            <p class="btn border emoji">😰</p>
+                            <p class="btn border emoji">😯</p>
+                            <p class="btn border emoji">😦</p>
+                            <p class="btn border emoji">😧</p>
+                            <p class="btn border emoji">😢</p>
+                            <p class="btn border emoji">😥</p>
+                            <p class="btn border emoji">😪</p>
+                            <p class="btn border emoji">🤤</p>
+                            <p class="btn border emoji">😓</p>
+                            <p class="btn border emoji">😭</p>
+                            <p class="btn border emoji">🤩</p>
+                            <p class="btn border emoji">😵</p>
+                            <p class="btn border emoji">😲</p>
+                            <p class="btn border emoji">🤯</p>
+                            <p class="btn border emoji">🤐</p>
+                            <p class="btn border emoji">😷</p>
+                            <p class="btn border emoji">🤕</p>
+                            <p class="btn border emoji">🤒</p>
+                            <p class="btn border emoji">🤮</p>
+                            <p class="btn border emoji">🤢</p>
+                            <p class="btn border emoji">🤧</p>
+                            <p class="btn border emoji">😴</p>
+                            <p class="btn border emoji">💤</p>
+                            <p class="btn border emoji">💩</p>
+                            <p class="btn border emoji">👐</p>
+                            <p class="btn border emoji">🤲</p>
+                            <p class="btn border emoji">🙌</p>
+                            <p class="btn border emoji">👏</p>
+                            <p class="btn border emoji">🙏</p>
+                            <p class="btn border emoji">🤝</p>
+                            <p class="btn border emoji">👍</p>
+                            <p class="btn border emoji">👎</p>
+                            <p class="btn border emoji">👊</p>
+                            <p class="btn border emoji">✊</p>
+                            <p class="btn border emoji">🤛</p>
+                            <p class="btn border emoji">🤜</p>
+                            <p class="btn border emoji">🤞</p>
+                            <p class="btn border emoji">✌</p>
+                            <p class="btn border emoji">🤘</p>
+                            <p class="btn border emoji">🤟</p>
+                            <p class="btn border emoji">👌</p>
+                            <p class="btn border emoji">👈</p>
+                            <p class="btn border emoji">👉</p>
+                            <p class="btn border emoji">👆</p>
+                            <p class="btn border emoji">👇</p>
+                            <p class="btn border emoji">☝</p>
+                            <p class="btn border emoji">✋</p>
+                            <p class="btn border emoji">🤚</p>
+                            <p class="btn border emoji">🖐</p>
+                            <p class="btn border emoji">🖖</p>
+                            <p class="btn border emoji">👋</p>
+                            <p class="btn border emoji">🤙</p>
+                            <p class="btn border emoji">💪</p>
+                            <p class="btn border emoji">🖕</p>
+                            <p class="btn border emoji">✍</p>
+                            <p class="btn border emoji">🤳</p>
+                            <p class="btn border emoji">👀</p>
+                            <p class="btn border emoji">🧠</p>
+                            <p class="btn border emoji">👤</p>
+                            <p class="btn border emoji">👥</p>
+                            <p class="btn border emoji">🗣</p>
+                            <p class="btn border emoji">👶</p>
+                            <p class="btn border emoji">🧒</p>
+                            <p class="btn border emoji">👦</p>
+                            <p class="btn border emoji">👧</p>
+                            <p class="btn border emoji">🧑</p>
+                            <p class="btn border emoji">👨</p>
+                            <p class="btn border emoji">🧔</p>
+                            <p class="btn border emoji">👱‍♂️</p>
+                            <p class="btn border emoji">👩</p>
+                            <p class="btn border emoji">👱‍♀️</p>
+                            <p class="btn border emoji">🧓</p>
+                            <p class="btn border emoji">👴</p>
+                            <p class="btn border emoji">👵</p>
+                            <p class="btn border emoji">👲</p>
+                            <p class="btn border emoji">👳‍♀️</p>
+                            <p class="btn border emoji">👳‍♂️</p>
+                            <p class="btn border emoji">🧕</p>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary col-12 col-sm-1">Enviar</button>                
+            </form>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/assets/js/chat.js"></script>
+</body>
+</html>

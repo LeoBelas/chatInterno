@@ -1,0 +1,32 @@
+    #chat{
+        height: 500px;
+    }
+    #contentWrap{
+        display: none;
+        width: 100%
+    }
+    #chatWrap{
+        float: left;
+        border: 1px #000 solid;
+        width: 80%;
+        margin: auto;
+    }
+    #usersWrap{
+        width: 20%;
+        display: inline;
+    }
+    .error, #nickError{
+        color: red;
+    }
+    .whisper{
+        color: gray;
+        font-style: italic;
+    }
+    #nickWrap{
+        width: 75%;
+        height: 400px;
+        margin:auto;
+    }
+    .emojisContainer{
+        overflow: auto;
+    }    
